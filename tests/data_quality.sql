@@ -30,3 +30,11 @@ where outstanding_amount < 0;
 select customer_id, paid_lifetime_value
 from marts.mart_customer_lifetime_revenue
 where paid_lifetime_value < 0;
+
+select month_start, mrr
+from marts.mart_monthly_recurring_revenue
+where mrr < 0;
+
+select invoice_month, billed_amount, paid_amount
+from marts.mart_invoice_collection_status
+where paid_amount > billed_amount;

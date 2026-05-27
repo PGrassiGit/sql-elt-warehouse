@@ -38,6 +38,12 @@ docker compose exec -T postgres psql -U portfolio -d portfolio -f /work/tests/da
 
 The SQL checks cover duplicate invoices, missing keys, negative amounts, invalid subscription dates, orphan payments, and impossible outstanding balances.
 
+Metric examples:
+
+```bash
+docker compose exec -T postgres psql -U portfolio -d portfolio -f /work/sql/03_metric_examples.sql
+```
+
 ## Production Notes
 
 - A production version would load raw data incrementally instead of rebuilding every table.
@@ -49,6 +55,7 @@ The SQL checks cover duplicate invoices, missing keys, negative amounts, invalid
 
 - [Architecture](docs/architecture.md)
 - [Metric definitions](docs/metric_definitions.md)
+- [Sample results](docs/sample_results.md)
 
 ## Portuguese
 
